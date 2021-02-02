@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { getCharacters } from '../../services/heyArnoldApi';
 import CharacterList from './CharacterList';
 

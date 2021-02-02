@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Character from './Character';
 
-export default class CharacterList extends Component {
-  render() {
+const CharacterList = ({ characters }) => {
+    const characterElements = characters.map(character => (
+        <li key={character._id}>
+            <Character {...character} />
+        </li>
+    ))
+    
     return (
-      <div>
-                
-      </div>
-    );
-  }
+        <ul>
+            {characterElements}
+        </ul>
+    )
 }
+
+export default CharacterList;
