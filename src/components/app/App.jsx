@@ -7,6 +7,7 @@ export default function App() {
     <>
       <Router>
         <Switch>
+          
           <Route 
             path="/" 
             exact 
