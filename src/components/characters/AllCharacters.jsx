@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCharacters } from '../../services/heyArnoldApi';
+import { getAllCharacters } from '../../services/getAllCharacters';
 import CharacterList from './CharacterList';
 
 export default class AllCharacters extends Component {
@@ -8,7 +8,7 @@ export default class AllCharacters extends Component {
     }
 
     componentDidMount() {
-      getCharacters()
+      getAllCharacters()
         .then(characters => this.setState({ characters }));
     }
     
