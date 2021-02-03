@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CharacterList from '../characters/CharacterList';
-
-const URL = 'https://hey-arnold-api.herokuapp.com/api/v1/characters';
+import { getCharacter } from '../../services/getCharacter';
+import Character from '../characters/Character';
+// import PropTypes from 'prop-types';
 
 export default class DetailPage extends Component {
     state = {
-      characterData: ''
+      characterData: {}
     }
     
-    componentDidMount = async () => {
-      // eslint-disable-next-line max-len
-      const character = await fetch(`${URL}/${this.props.match.params.id}`);
-
-      this.setState({ characterData: character.body });
-          
+    componentDidMount() {
+      getCharacter(this.props.match.params.id)
+        .then(characterData => this.setState({ characterData }));
     }
     
     render() {
+      const { characterData } = this.state;
+
       return (
         <>
           <Link to="/">Return Home</Link>   
 
-          <CharacterList characterData={this.state.characterData} /> 
+          <Character name={characterData.name} image={characterData.image} /> 
         </>
       );
     }
 }
+
+// Character.propTypes = {
+//     name: PropTypes.string.isRequired
+//   };

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Character = ({ _id, name, image }) => (
+const Character = ({ name, image }) => (
   <>
-      <h3>{name}</h3>
-      <img src={image} />
+    <h3>{name}</h3>
+    <img src={image} />
   </>
 );
 

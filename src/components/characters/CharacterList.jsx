@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const CharacterList = ({ characters }) => {
     const characterElements = characters.map(character => (
         <Link to={`/detail/${character._id}`}>
-        <li key={character._id}>
-            <Character {...character} />
-        </li>
+            <li key={character._id}>
+                <Character {...character} />
+            </li>
         </Link>
     ))
     
