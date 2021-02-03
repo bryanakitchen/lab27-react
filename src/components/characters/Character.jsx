@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CharacterH3 = styled.h3`
-    color: #6D6875;
+    color: #0D3B66;
 `;
 
 const CharacterImage = styled.img`

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const MainHeader = styled.h1`
-    color: #B5838D;
+    color: #EE964B;
     text-align: center;
 `;
 
 const Paragraph = styled.p`
-    color: #B5838D;
+    color: #EE964B;
     font-size: 17px;
     text-align: center;
 `;
