@@ -32,7 +32,7 @@ const DetailPageLink = styled(Link)`
     text-decoration: none;
 `;
 
-
+// eslint-disable-next-line react/prop-types
 const CharacterList = ({ characters }) => {
   // eslint-disable-next-line react/prop-types
   const characterElements = characters.map(character => (
