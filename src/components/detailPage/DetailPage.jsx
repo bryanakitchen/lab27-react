@@ -9,6 +9,7 @@ export default class DetailPage extends Component {
     }
     
     componentDidMount() {
+      // eslint-disable-next-line react/prop-types
       getCharacter(this.props.match.params.id)
         .then(characterData => this.setState({ characterData }));
     }
